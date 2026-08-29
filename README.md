@@ -9,7 +9,7 @@ A full-stack starter for browser-based birthday party games. Players can create 
 - Socket.IO room creation, joining, leaving, host migration, and presence updates
 - Shared, strongly typed client/server events
 - An in-memory room registry with validation and unit tests
-- Placeholder cards for trivia, charades, and drawing games
+- Playable Birthday Trivia, “Steph did that!?”, and “Guess the Era” party games
 - ESLint, strict TypeScript, and Vitest configuration
 
 ## Requirements
@@ -58,6 +58,42 @@ A full-stack starter for browser-based birthday party games. Players can create 
 3. Implement authoritative game rules on the server; do not trust scores sent by browsers.
 4. Add a route such as `src/app/room/[code]/trivia/page.tsx` or switch the lobby view based on room status.
 5. Add server tests for scoring, turn order, time limits, reconnects, and host changes.
+
+## Adding Guess the Era photos
+
+Place Stephanie photos in `content/steph-eras`. Start each filename with her age when the photo was taken, followed by an optional description:
+
+- `0-newborn.jpg`
+- `7-first-day-of-school.png`
+- `18-graduation.webp`
+- `30-birthday.jpeg`
+
+Ages must be whole numbers from 0 through 30. AVIF, GIF, JPG/JPEG, PNG, and WebP images are supported. Restart the server after changing the photos. The application serves each image through an opaque URL so the filename does not reveal the answer during play.
+
+## Editing game questions
+
+Question banks are editable JSON files in `content/questions`. Restart the server after changing them.
+
+For `steph-did-that.json`, each entry has a question and a true/false answer:
+
+```json
+{
+   "question": "Steph has eaten cake for breakfast three days in a row.",
+   "answer": true
+}
+```
+
+For `birthday-trivia.json`, each entry has a question, an array of answer options, and the zero-based index of the correct option. In this example, `1` means the second option:
+
+```json
+{
+   "question": "A golden birthday happens when your age matches what?",
+   "options": ["Your birth month", "Your birth date", "Your birth year"],
+   "answer": 1
+}
+```
+
+The server validates both files at startup and does not send correct answers to players before the host reveals them.
 
 ## Production notes
 

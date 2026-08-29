@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Which month has the birthstone sapphire?",
+    "options": ["June", "September", "November", "December"],
+    "answer": 1
+  },
+  {
+    "question": "What is the traditional song sung before blowing out birthday candles?",
+    "options": ["For She's a Jolly Good Fellow", "Celebration", "Happy Birthday to You", "Auld Lang Syne"],
+    "answer": 2
+  },
+  {
+    "question": "A golden birthday happens when your age matches what?",
+    "options": ["Your birth month", "Your birth date", "Your birth year", "The number of guests"],
+    "answer": 1
+  },
+  {
+    "question": "Which treat is most traditionally topped with birthday candles?",
+    "options": ["Pie", "Cake", "Ice cream", "Cookies"],
+    "answer": 1
+  },
+  {
+    "question": "How many years are in a decade?",
+    "options": ["5", "10", "20", "25"],
+    "answer": 1
+  }
+]

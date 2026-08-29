@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Steph once celebrated a birthday in two different time zones on the same day.",
+    "answer": false
+  },
+  {
+    "question": "Steph has eaten cake for breakfast three days in a row.",
+    "answer": true
+  },
+  {
+    "question": "Steph once wore mismatched shoes for an entire day without noticing.",
+    "answer": true
+  },
+  {
+    "question": "Steph has sung karaoke in front of more than 100 people.",
+    "answer": false
+  },
+  {
+    "question": "Steph once planned a surprise party and accidentally invited the guest of honor to the group chat.",
+    "answer": true
+  }
+]
